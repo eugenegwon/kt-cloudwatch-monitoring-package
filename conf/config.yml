@@ -1,0 +1,8 @@
+accounts:
+  - ACCOUNT_NAME_HERE:
+      provider: "kt"
+      key: "API_KEY_HERE"
+      secret: "SECRET_KEY_HERE"
+      influxdb:
+        ip: "INFLUXDB_CONTAINER_IP_HERE"
+        port: 8086
