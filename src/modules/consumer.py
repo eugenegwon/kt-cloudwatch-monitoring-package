@@ -63,6 +63,7 @@ class influxdb_request(object):
 class run(object):
     def __init__(self, configpath, starttime, endtime):
         self.config=json.loads(config_read(configpath))
+        message=[] #for result message
         
         try:
             for account in self.config.get("accounts"):
@@ -78,7 +79,6 @@ class run(object):
                 #need exception here
                 
                 metrics_data=get_metrics_data()
-                message=[] #for result message
 
                 influxdb_conn=influxdb_request(account_name,influxdb_info) 
                 for i in metrics_data:
